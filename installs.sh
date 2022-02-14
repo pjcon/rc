@@ -1,8 +1,10 @@
 #!/bin/bash
 
-if [[ `uname -r` == *"el7"* ]]; then
+DISTRO="`uname -r`"
+
+if [[ "$DISTRO" == *"el7"* ]]; then
     PACMAN="yum install"
-elif [[ ]]; then
+elif [[  "$DISTRO" == *"ubuntu"* ]]; then
     PACMAN="apt install"
 fi
 
